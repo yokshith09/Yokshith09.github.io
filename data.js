@@ -1,0 +1,174 @@
+/* =====================================================================
+   ALL YOUR CONTENT LIVES HERE. Edit this file only — every page reads it.
+   Filled from your public GitHub (yokshith09) and LinkedIn profiles.
+   Items marked TODO are waiting for your CV.
+   ===================================================================== */
+window.SITE = {
+  name: 'Yokshith',
+  fullName: 'Yokshith Kuchipudi',
+  role: 'AI/ML Engineer & Full-Stack Developer',
+  status: 'Open to internships',
+  email: 'yokshithkuchipudi09@gmail.com',
+  location: 'Coimbatore, India',
+  resume: '#',                              // TODO: link to your CV PDF
+  photo: 'yokshith.jpg',
+  heroWords: ['Ship', 'Scale', 'See', 'Think'],
+  intro: "I'm Yokshith — a CS undergrad at Amrita building across the whole ML pipeline: YOLOv8 vision models running on a Raspberry Pi, multi-agent AI systems, and beautifully interactive products people actually use — with the goal of turning them into businesses.",
+  stats: [
+    { n: 30, plus: true,  label: 'Projects' },
+    { n: 2,  plus: false, label: 'Hackathon Wins' },
+    { n: 10, plus: true,  label: 'Live Apps' },
+  ],
+  highlight: { n: 2, plus: false, label: 'Internships', title: 'AI & Business, Both Sides', text: 'AI Generalist at SurgeX Digital; Sales & Marketing at Franco Rugs.' },
+  shipped: { n: 30, plus: true },
+  marquee: ['Machine Learning', 'Computer Vision', 'Agentic AI', 'Full-Stack Dev', 'Edge AI', 'Design Systems', 'Entrepreneurship'],
+
+  /* Home → "Design that feels alive". `image` optional; without it a styled tile is drawn. */
+  designWork: [
+    { name: 'OpsMind Dashboard', text: 'Operations dashboard design system — data-dense, calm and interactive.', tag: 'Dashboard', colors: ['#1a1c1c', '#3031b6'] },
+    { name: 'DRIP', text: 'Editorial fashion store with try-on and a 3D fitting room.', tag: 'E-commerce UI', image: 'shots/drip.png', url: 'https://dripivory.vercel.app', colors: ['#efeee6', '#1a1c1c'] },
+    { name: 'WearShare', text: 'Warm, trustworthy marketplace for community clothing rentals.', tag: 'Marketplace UI', image: 'shots/wearshare.png', url: 'https://wearshare.qzz.io/', colors: ['#ffede6', '#ea6c11'] },
+    { name: 'Pluto Landing Page', text: 'A live planet, a desktop pet and a story told through scroll.', tag: 'Landing page', colors: ['#e1e0ff', '#6f6ff0'] },
+    { name: 'Pluto In-App UI/UX', text: 'Notes, tasks, meetings and a companion pet in one calm desktop app.', tag: 'Product UI/UX', colors: ['#dae2ff', '#00419f'] },
+  ],
+
+  services: [
+    { icon: 'search',  title: 'ML & Computer Vision',  text: 'Dataset curation, YOLO-format annotation, training with PyTorch and YOLOv8, and self-supervised learning with SimCLR.' },
+    { icon: 'bot',     title: 'Agentic AI Systems',    text: 'Multi-agent systems and MCP servers that detect, decide and act — from supply chains to industrial symbiosis.' },
+    { icon: 'cursor',  title: 'Full-Stack Products',   text: 'Next.js, React and Supabase apps with auth, payments and AI features, deployed and live.' },
+    { icon: 'flow',    title: 'Edge AI Deployment',    text: 'Real-time inference on constrained hardware like the Raspberry Pi 4 using ONNX Runtime.' },
+    { icon: 'palette', title: 'Entrepreneurship',      text: 'Building products as businesses — from idea and market to sales, marketing and launch.' },
+    { icon: 'pen',     title: 'Interactive Design Systems', text: 'Dashboards, landing pages and in-app UI/UX that feel alive — OpsMind, DRIP, WearShare and Pluto.' },
+  ],
+
+  /* Case studies. `image` = real screenshot; without it a mock preview is drawn. */
+  projects: [
+    { id: 'passwordpal', title: 'PasswordPal — Zero-Knowledge Password Manager', summary: 'A cross-platform desktop app where the server never sees your plaintext passwords — everything is encrypted on your device first.',
+      tags: ['Security', 'Desktop'], duration: 'Personal project', role: 'Full-stack & DevOps', tools: 'React, TypeScript, Tauri, Rust, Node.js, Supabase', team: 'Solo',
+      colors: ['#dae2ff', '#3031b6'], type: 'desktop',
+      stats: [{ n: 34, plus: false, label: 'Automated Tests' }, { n: 3, plus: false, label: 'Operating Systems' }, { n: 256, plus: false, label: 'Bit AES-GCM' }],
+      sections: [
+        { title: 'Project Overview', body: ['PasswordPal is a zero-knowledge password manager: the encrypted vault is never decrypted on the server.', 'Frontend in React + TypeScript on Tauri (Rust); backend in Node.js + Express with Supabase (PostgreSQL).'] },
+        { title: 'Key Design Decisions', callout: true, body: ['Security is decided by architecture, not by promises.'],
+          list: ['Zero-knowledge architecture — the vault is never decrypted server-side', 'AES-256-GCM with Argon2 key derivation, implemented in Rust', 'Rust wipes key material from memory (zeroize) after use', 'Infrastructure as code with render.yaml, versioned alongside the app'] },
+        { title: 'CI/CD Pipeline', body: ['A full DevOps pipeline built from scratch with GitHub Actions.'],
+          list: ['Unit tests on every push — React (jsdom) + Rust, 34 tests', 'Security audit of all production dependencies', 'Auto-deploy to Render on merge to main, with health-check polling', 'Tauri matrix builds for Linux, macOS and Windows in parallel', 'GitHub Releases with native installers: .deb, .AppImage, .dmg, .exe, .msi'] },
+        { title: 'What I Learned', body: ['Hands-on experience running a project from first commit to live deployment and automated cross-platform releases.'] },
+      ] },
+    { id: 'supplyshock', title: 'SupplyShock — Multi-Agent Supply-Chain AI', summary: 'A multi-agent system that detects supply-chain disruptions, analyses supplier exposure, recommends recovery strategies and executes approved actions.',
+      tags: ['Agentic AI', 'Fetchathon 3.0'], duration: 'Hackathon', role: 'AI Engineer', tools: 'Python, Fetch.ai uAgents', team: 'Team',
+      colors: ['#ffede6', '#ea6c11'], type: 'desktop', chart: 'bars', repo: 'https://github.com/yokshith09/SupplyShock-FETCHATHON-3.0',
+      sections: [
+        { title: 'Project Overview', body: ['Built for Fetchathon 3.0: a team of cooperating agents that manage supply-chain disruption end to end.'] },
+        { title: 'Problem Statement', callout: true, body: ['When a supplier fails, teams lose time working out who is exposed and what to do next.'] },
+        { title: 'How It Works', body: ['Specialised agents built on Fetch.ai uAgents split the job:'], list: ['Detect risk signals', 'Analyse supplier exposure', 'Recommend recovery strategies', 'Execute actions only after human approval'] },
+      ] },
+    { id: 'drip', title: 'DRIP — AI 3D Virtual Try-On', summary: 'A fashion e-commerce platform with AI virtual try-on, AI stylist chat, personalised recommendations and a 3D fitting room.',
+      tags: ['AI', 'E-commerce', 'Live'], duration: 'Live product', role: 'Full-stack Developer', tools: 'TypeScript, React', team: 'Solo',
+      colors: ['#f4f3ee', '#1a1c1c'], type: 'desktop', image: 'shots/drip.png', url: 'https://dripivory.vercel.app',
+      sections: [
+        { title: 'Project Overview', body: ['DRIP makes online clothes shopping interactive: try garments on virtually before buying.'] },
+        { title: 'Features', list: ['AI virtual try-on', 'AI chatbot stylist', 'Personalised style recommendations', '3D fitting room using structural garment data'], body: [] },
+        { title: 'Live', body: ['DRIP is live at dripivory.vercel.app.'] },
+      ] },
+    { id: 'weedplucker', title: 'WeedPlucker — YOLOv8 Edge Vision', summary: 'Weed and crop detection with YOLOv8 instance segmentation, built on a hand-annotated field dataset and aimed at robotic plucking.',
+      tags: ['Computer Vision', 'Edge AI'], duration: 'Research project', role: 'ML Engineer', tools: 'Python, PyTorch, YOLOv8, ONNX Runtime', team: 'Team',
+      colors: ['#b8ffb5', '#00530d'], type: 'desktop', chart: 'bars', repo: 'https://github.com/yokshith09/WeedPlucker-YOLOv8-Intelligent-Weed-Detection-Robotic-Plucking-System',
+      sections: [
+        { title: 'Project Overview', body: ['A precision-agriculture vision system: detect crops and weeds in real fields so a robot can pluck the weeds.'] },
+        { title: 'The Dataset', callout: true, body: ['Real field images under natural lighting, with occlusions, shadows and complex backgrounds — annotated for instance segmentation.'] },
+        { title: 'Model & Deployment', body: ['YOLOv8n-seg trained for high-precision detection and segmentation, exported for real-time inference on a Raspberry Pi 4 with ONNX Runtime.'] },
+      ] },
+  ],
+  ribbon: ['PasswordPal', 'SupplyShock', 'DRIP', 'WeedPlucker', 'WearShare', 'AgentArena'],
+
+  /* Works page tiles, filterable. cats: Hackathons, AI, Machine Learning, Full-Stack, Robotics.
+     `id` links to a case study; otherwise `url` (live) or `repo` (GitHub). */
+  works: [
+    { id: 'passwordpal', title: 'PasswordPal', text: 'Zero-knowledge password manager in Tauri + Rust with full CI/CD.', cats: ['Full-Stack'], colors: ['#dae2ff', '#3031b6'] },
+    { id: 'supplyshock', title: 'SupplyShock', text: 'Multi-agent supply-chain disruption system — Fetchathon 3.0.', cats: ['AI', 'Hackathons'], colors: ['#ffede6', '#ea6c11'] },
+    { id: 'drip', title: 'DRIP', text: 'AI virtual try-on store with a 3D fitting room.', cats: ['AI', 'Full-Stack'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
+    { id: 'weedplucker', title: 'WeedPlucker', text: 'YOLOv8 weed detection on a Raspberry Pi for robotic plucking.', cats: ['Machine Learning', 'Robotics'], colors: ['#b8ffb5', '#00530d'] },
+    { title: 'SymBioForge — 2nd Place', text: 'Industrial symbiosis MCP platform — NitroStack Agentic AI Hackathon, Team CREED.', cats: ['Hackathons', 'AI'], image: 'shots/symbioforge.png', url: 'https://sym-bio-forge.vercel.app/', colors: ['#ffdf92', '#ea6c11'] },
+    { title: 'Hackathon Win #2', text: 'TODO — details from your CV.', cats: ['Hackathons'], colors: ['#e1e0ff', '#3031b6'] },
+    { title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', cats: ['Hackathons', 'AI'], colors: ['#ffede6', '#ca36b2'] },
+    { title: 'WearShare', text: 'Peer-to-peer clothing rental marketplace — Next.js, Supabase, Razorpay, Gemini.', cats: ['Full-Stack'], image: 'shots/wearshare.png', url: 'https://wearshare.qzz.io/', colors: ['#ffede6', '#ea6c11'] },
+    { title: 'Collab Space', text: 'AI collaboration platform: PRDs, teammates and architecture diagrams.', cats: ['AI', 'Full-Stack'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
+    { title: 'AgentArena', text: 'Benchmarking AI agents with hidden tests, cost tracking and fault injection.', cats: ['AI'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
+    { title: 'Autonomous Quadruped SLAM', text: 'Multi-agent SLAM, depth perception and frontier exploration in CoppeliaSim.', cats: ['Robotics', 'AI'], repo: 'https://github.com/yokshith09/Autonomous-Quadruped-SLAM-Navigation-Perception', colors: ['#dae2ff', '#00419f'] },
+    { title: 'Diabetic Retinopathy Detection', text: 'Deep learning on retinal images to detect diabetic retinopathy.', cats: ['Machine Learning'], repo: 'https://github.com/yokshith09/Advanced-Diabetic-Retinopathy-Detection', colors: ['#b8ffb5', '#00a825'] },
+    { title: 'Cauliflower Segmentation', text: 'YOLOv8n-seg model for precise cauliflower detection and segmentation.', cats: ['Machine Learning', 'Robotics'], repo: 'https://github.com/yokshith09/cauliflower_detection', colors: ['#efeee6', '#594400'] },
+    { title: 'Fake Currency Detection', text: 'LBP texture features and a Random Forest classifier — 77% accuracy.', cats: ['Machine Learning'], repo: 'https://github.com/yokshith09/FAKE-CURRENCY-DETECTION-USING-MACHINE-LEARNING-AND-IMAGE-PROCESSING-TECHNIQUES', colors: ['#ffdf92', '#594400'] },
+    { title: 'Smart Pet Food & Door Automation', text: 'Automated pet feeding and door control system.', cats: ['Robotics'], repo: 'https://github.com/yokshith09/Smart-Pet-Food-Monitoring-and-Door-Automation-System', colors: ['#ffede6', '#e32e25'] },
+    { title: 'Secure Travel Itinerary', text: 'Flask + MongoDB app with MFA, RBAC, AES-256 and RSA-2048 signatures.', cats: ['Full-Stack'], url: 'https://secured-travel-iternary.vercel.app', colors: ['#dae2ff', '#3031b6'] },
+    { title: 'Urban Emission System', text: 'Urban emissions analysis and visualisation app.', cats: ['Machine Learning', 'Full-Stack'], url: 'https://urban-emission-system.onrender.com/', colors: ['#b8ffb5', '#00530d'] },
+    { title: 'Atelier', text: 'Clothes rental platform front end.', cats: ['Full-Stack'], url: 'https://atelier-clothes-rental-platform-fro.vercel.app/', colors: ['#efeee6', '#ca36b2'] },
+  ],
+
+  /* (no longer shown; the Works page uses `works` above) */
+  showcase: [
+    { title: 'SymBioForge — 2nd Place', text: '2nd place, Manufacturing & Industry 4.0 track, NitroStack 24-hour Agentic AI Hackathon, with Team CREED.', tag: 'Hackathon Win', colors: ['#ffdf92', '#ea6c11'] },
+    { title: 'Hackathon Win #2', text: 'TODO — details from your CV.', tag: 'Hackathon Win', colors: ['#e1e0ff', '#3031b6'] },
+    { title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', tag: 'Hackathon', colors: ['#ffede6', '#ca36b2'] },
+    { title: 'Autonomous Quadruped SLAM', text: 'A quadruped robot exploring unknown spaces with multi-agent SLAM, depth perception and frontier exploration in CoppeliaSim.', tag: 'Robotics', colors: ['#dae2ff', '#00419f'] },
+    { title: 'Diabetic Retinopathy Detection', text: 'Deep learning on retinal images to detect diabetic retinopathy.', tag: 'Medical AI', colors: ['#b8ffb5', '#00a825'] },
+    { title: 'Fake Currency Detection', text: 'Texture, histogram and edge features with LBP and a Random Forest classifier — 77% accuracy.', tag: 'Machine Learning', colors: ['#efeee6', '#594400'] },
+  ],
+
+  /* Live products + what you're building now */
+  live: [
+    { name: 'DRIP', text: 'AI fashion store with virtual try-on, an AI stylist and a 3D fitting room.', url: 'https://dripivory.vercel.app', image: 'shots/drip.png', metric: 'Live', tags: ['AI', 'E-commerce'], colors: ['#efeee6', '#1a1c1c'] },
+    { name: 'WearShare', text: 'Peer-to-peer rental marketplace for premium ethnic and occasion wear.', url: 'https://wearshare.qzz.io/', image: 'shots/wearshare.png', metric: 'Live', tags: ['Next.js', 'Supabase', 'Razorpay'], colors: ['#ffede6', '#ea6c11'] },
+    { name: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs, find teammates and visualise architectures.', url: 'https://collab-space-teal.vercel.app/', metric: 'Live', tags: ['AI', 'Teams'], colors: ['#e1e0ff', '#3031b6'] },
+  ],
+  building: [
+    { name: 'Pluto — Desktop Productivity Companion', text: 'A local-first desktop companion for notes, tasks, meetings and daily work logs — with a desktop pet. Voice features in Rust.', tags: ['TypeScript', 'Rust', 'Local-first'], url: 'https://github.com/yokshith09/PLUTO-DESKTOP-PRODUCTIVITY-COMPANION' },
+    { name: 'AgentArena', text: 'A framework-independent platform for benchmarking AI agents: controlled tasks, hidden-test evaluation, LLM cost tracking and fault injection.', tags: ['AI Agents', 'Benchmarks'], url: 'https://github.com/yokshith09/AgentArena' },
+  ],
+
+  /* slug = icon name on simpleicons.org */
+  tools: [
+    ['pytorch', 'EE4C2C', '#fbdcd6', 'PyTorch & YOLOv8', 'Training and deploying vision models — YOLOv8, SimCLR, ONNX Runtime on Raspberry Pi.'],
+    ['python', '3776AB', '#f3e8c4', 'Python & Agents', 'Multi-agent systems, MCP servers, data pipelines and backend services.'],
+    ['react', '149ECA', '#d4ecf5', 'React, Next.js & Rust', 'Production web apps and Tauri desktop apps with real CI/CD.'],
+    ['typescript', '3178C6', '#d6e2f3'], ['nextdotjs', '111111', '#e2e0dc'], ['rust', '000000', '#ead9cc'], ['tauri', '24C8D8', '#d3f1f4'],
+    ['supabase', '3ECF8E', '#d3f1e3'], ['opencv', '5C3EE8', '#dedaf9'], ['raspberrypi', 'A22846', '#f3d6dd'], ['onnx', '005CED', '#d4e3fa'], ['claude', 'D97757', '#f6ddd2'],
+  ],
+  languages: [['English', 95], ['Telugu', 100], ['Hindi', 70], ['Tamil', 55]],   // TODO: confirm from CV
+  process: ['Ideas', 'Data', 'Design', 'Build', 'Ship', 'Scale'],
+  craftLine: "I don't build to impress. I build to express, solve, and simplify.",
+
+  faq: [
+    ['What roles are you looking for?', 'Internships in Machine Learning / Computer Vision, Data Science & Analytics, Python Development and Business Analysis.'],
+    ['What do you build best?', 'End-to-end ML (data → model → edge deployment), multi-agent AI systems, and full-stack products that go live.'],
+    ['Can I see the code?', 'Yes — most projects are public on GitHub at github.com/yokshith09.'],
+    ['Do you work in teams?', "Yes. I've built hackathon projects with Team CREED and interned on both the AI and business sides."],
+    ['How do I reach you?', 'Use the form below or email yokshithkuchipudi09@gmail.com — I reply quickly.'],
+  ],
+  social: [
+    ['GitHub', 'https://github.com/yokshith09'],
+    ['LinkedIn', 'https://www.linkedin.com/in/yokshith-kuchipudi-67a0452b3/'],
+    ['Email', 'mailto:yokshithkuchipudi09@gmail.com'],
+  ],
+
+  /* About page */
+  about: {
+    bio: "I'm a Computer Science undergraduate at Amrita Vishwa Vidyapeetham focused on Machine Learning, Computer Vision and Edge AI. My work spans the full ML pipeline — curating datasets and annotating in YOLO format, training with PyTorch and YOLOv8, and deploying for real-time inference on hardware like the Raspberry Pi 4 with ONNX Runtime — plus self-supervised learning with SimCLR and contrastive (NT-Xent) loss. On the business side I've handled sales, social strategy and digital marketing. I love designing interactive, beautiful systems — dashboards, landing pages and in-app UI/UX — and I'm driven by entrepreneurship: my goal is to build products into businesses. Beyond tech I'm a professional cricket player and an actor, which taught me discipline, teamwork and performing under pressure.",
+    experience: [
+      { company: 'SurgeX Digital', role: 'AI Generalist Intern · Remote', from: 'Aug 2026', to: 'Sep 2026', color: ['#dae2ff', '#3031b6'] },
+      { company: 'Franco Rugs', role: 'Sales and Marketing Intern', from: 'Nov 2025', to: 'May 2026', color: ['#ffede6', '#e32e25'] },
+      { company: 'National Service Scheme', role: 'Volunteer · Social Services', from: 'Oct 2024', to: 'Present', color: ['#b8ffb5', '#00530d'] },
+    ],
+    education: [ { title: 'B.Tech, Computer Science & Engineering', place: 'Amrita Vishwa Vidyapeetham, Coimbatore', from: 'TODO', to: 'Present' } ],
+    certs: [
+      { title: 'Nitrostack MCP Creator', place: 'Nitrostack', time: 'Jul 2026', url: 'https://nitrostack.ai/university/6a54bc7ccc0a343237365fb3/certificate/6a645749b7c23ca10dd2042b' },
+    ],
+    skills: {
+      'Machine Learning & Vision': ['PyTorch', 'YOLOv8', 'OpenCV', 'SimCLR', 'Contrastive Learning', 'scikit-learn', 'Random Forest', 'ONNX Runtime', 'Raspberry Pi'],
+      'AI Agents': ['Multi-agent Systems', 'Fetch.ai uAgents', 'MCP Servers', 'LLM Evaluation', 'Prompt Engineering'],
+      'Full-Stack & DevOps': ['React', 'Next.js', 'TypeScript', 'Node.js', 'Flask', 'Supabase', 'PostgreSQL', 'MongoDB', 'Rust', 'Tauri', 'GitHub Actions', 'Render', 'Vercel'],
+      'Business': ['Sales Outreach', 'Social Media Strategy', 'Digital Marketing', 'Client Communication'],
+    },
+    hobbies: [['🏏', 'Cricket'], ['🎭', 'Acting'], ['🤝', 'Volunteering'], ['🤖', 'Robotics'], ['📚', 'Learning'], ['🚀', 'Hackathons']],
+  },
+};
