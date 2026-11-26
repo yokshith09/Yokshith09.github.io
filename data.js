@@ -82,18 +82,19 @@ window.SITE = {
   ],
   ribbon: ['PasswordPal', 'SupplyShock', 'DRIP', 'WeedPlucker', 'WearShare', 'AgentArena'],
 
-  /* Works page. `groups` = sections it appears in (AI, Machine Learning, Full-Stack, Desktop, Robotics, Hackathons);
+  /* Works page. `groups` = sections it appears in (AI, Machine Learning, Full-Stack, Cloud, Desktop, Robotics, Hackathons);
      `cats` are the small chips. `id` links to a case study; otherwise `url` (live) or `repo` (GitHub). */
   works: [
     // AI
     { groups: ['AI', 'Hackathons'], title: 'AgentArena', text: 'Benchmarks AI agents as black boxes: hidden tests, fault injection, cost and latency tracking. Finished 67th of 480 teams at a hackathon.', cats: ['AI Agents', 'Top 67 / 480'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
     { groups: ['AI', 'Full-Stack'], id: 'drip', title: 'DRIP', text: 'AI 3D virtual try-on store: Avatar Studio, Style DNA and IDM-VTON try-on.', cats: ['AI', 'Live'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
-    { groups: ['AI', 'Full-Stack'], title: 'OpsMind', text: 'GCP monitoring & support portal: logs, incidents and cost insights with Gemini explanations.', cats: ['GCP', 'Design System'], repo: 'https://github.com/yokshith09/OpsMind--GCP', colors: ['#1a1c1c', '#3031b6'] },
-    { groups: ['AI', 'Full-Stack'], title: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs and find teammates.', cats: ['AI', 'Live'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
+    { groups: ['Full-Stack', 'Cloud'], title: 'OpsMind', text: 'GCP monitoring & support portal: logs, incidents and cost insights with Gemini explanations.', cats: ['GCP', 'Design System'], repo: 'https://github.com/yokshith09/OpsMind--GCP', colors: ['#1a1c1c', '#3031b6'] },
+    { groups: ['Full-Stack'], title: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs and find teammates.', cats: ['AI', 'Live'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
     { groups: ['AI'], title: 'PACT', text: 'Shared project memory and module contracts for developers and AI coding agents, with impact analysis and MCP integration. Building now.', cats: ['MCP', 'In progress'], repo: 'https://github.com/yokshith09/PACT', colors: ['#ffede6', '#3031b6'] },
     { groups: ['Desktop'], title: 'Pluto', text: 'Local-first desktop productivity companion in Tauri v2 + React, with a desktop pet. Building now.', cats: ['Tauri', 'In progress'], repo: 'https://github.com/yokshith09/PLUTO-DESKTOP-PRODUCTIVITY-COMPANION', colors: ['#dae2ff', '#6f6ff0'] },
-    { groups: ['Desktop'], title: 'Pluto Voice', text: 'Voice layer for the Pluto desktop companion, written in Rust.', cats: ['Rust', 'In progress'], repo: 'https://github.com/yokshith09/PLUTO-VOICE', colors: ['#e1e0ff', '#3031b6'] },
+    { groups: ['Desktop', 'Hackathons'], title: 'Pluto Voice', text: 'Voice-driven desktop companion in Rust, built for the Gnani hackathon.', cats: ['Rust', 'Gnani Hackathon'], repo: 'https://github.com/yokshith09/PLUTO-VOICE', colors: ['#e1e0ff', '#3031b6'] },
     // Machine Learning
+    { groups: ['Machine Learning'], id: 'weedplucker', title: 'WeedPlucker', text: 'YOLOv8 weed segmentation (0.953 weed mAP@50) guiding a robot arm, on Raspberry Pi.', cats: ['YOLOv8', 'Edge AI'], colors: ['#b8ffb5', '#00530d'] },
     { groups: ['Machine Learning'], title: 'Cauliflower Segmentation', text: 'YOLOv8n-seg model for precise cauliflower detection and instance segmentation.', cats: ['YOLOv8', 'Vision'], repo: 'https://github.com/yokshith09/cauliflower_detection', colors: ['#efeee6', '#594400'] },
     { groups: ['Machine Learning'], title: 'Diabetic Retinopathy Detection', text: 'Deep learning on retinal images to detect diabetic retinopathy.', cats: ['Medical AI', 'CNN'], repo: 'https://github.com/yokshith09/Advanced-Diabetic-Retinopathy-Detection', colors: ['#b8ffb5', '#00a825'] },
     { groups: ['Machine Learning'], title: 'Fake Currency Detection', text: 'LBP texture features and a Random Forest classifier: 77% accuracy.', cats: ['Image Processing'], repo: 'https://github.com/yokshith09/FAKE-CURRENCY-DETECTION-USING-MACHINE-LEARNING-AND-IMAGE-PROCESSING-TECHNIQUES', colors: ['#ffdf92', '#594400'] },
@@ -105,12 +106,11 @@ window.SITE = {
     { groups: ['Full-Stack'], title: 'Atelier', text: 'Clothes rental platform front end.', cats: ['React', 'Live'], url: 'https://atelier-clothes-rental-platform-fro.vercel.app/', colors: ['#efeee6', '#ca36b2'] },
     // Robotics
     { groups: ['Robotics'], title: 'Autonomous Quadruped SLAM', text: 'Quadruped robot exploring unknown spaces with multi-agent SLAM, depth perception and frontier exploration.', cats: ['SLAM', 'CoppeliaSim'], repo: 'https://github.com/yokshith09/Autonomous-Quadruped-SLAM-Navigation-Perception', colors: ['#dae2ff', '#00419f'] },
-    { groups: ['Machine Learning', 'Robotics'], id: 'weedplucker', title: 'WeedPlucker', text: 'YOLOv8 weed segmentation (0.953 weed mAP@50) guiding a robot arm, on Raspberry Pi.', cats: ['YOLOv8', 'Edge AI'], colors: ['#b8ffb5', '#00530d'] },
     { groups: ['Robotics'], title: 'Smart Pet Food & Door Automation', text: 'Automated pet feeding and door control system.', cats: ['IoT'], repo: 'https://github.com/yokshith09/Smart-Pet-Food-Monitoring-and-Door-Automation-System', colors: ['#ffede6', '#e32e25'] },
     // Hackathons
     { groups: ['AI', 'Hackathons'], id: 'supplyshock', title: 'SupplyShock: Winner', text: 'Fetch-A-Thon 3.0 winner, Best Agentverse Deployment. Multi-agent supply-chain disruption system.', cats: ['Fetch.ai', 'Win'], colors: ['#ffede6', '#ea6c11'] },
     { groups: ['AI', 'Hackathons'], title: 'SymBioForge: 2nd Place', text: 'NitroStack Agentic AI Hackathon, Manufacturing & Industry 4.0 track. Industrial symbiosis MCP platform.', cats: ['MCP', '2nd Place'], image: 'shots/symbioforge.png', url: 'https://sym-bio-forge.vercel.app/', colors: ['#ffdf92', '#ea6c11'] },
-    { groups: ['AI', 'Hackathons'], title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', cats: ['AI'], colors: ['#ffede6', '#ca36b2'] },
+    { groups: ['Hackathons'], title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', cats: ['AI'], colors: ['#ffede6', '#ca36b2'] },
   ],
 
   /* (no longer shown; the Works page uses `works` above) */

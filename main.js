@@ -228,7 +228,7 @@ function works() {
   <div class="banner" id="top"><div class="blob" style="left:-5%;top:-30%;width:40%;height:160%;background:#ff4fb5"></div><div class="blob" style="left:25%;top:-20%;width:30%;height:140%;background:#c9a7ff;animation-delay:-4s"></div><div class="blob" style="left:50%;top:-40%;width:35%;height:170%;background:#ff8d4a;animation-delay:-8s"></div><div class="blob" style="right:-5%;top:-20%;width:25%;height:140%;background:#6f8cff"></div>${sphere('#ffd6ea', '#ffffffcc')}</div>
   <section><div class="frame"><div class="inner">
     <div class="page-head"><div class="kicker rv">Portfolio</div><h1 class="split">All Works</h1><p class="rv">${S.works.length} projects across AI, machine learning, full-stack, robotics and hackathons.</p></div>
-    ${['AI', 'Machine Learning', 'Full-Stack', 'Desktop', 'Robotics', 'Hackathons'].map(cat => {
+    ${['AI', 'Machine Learning', 'Full-Stack', 'Cloud', 'Desktop', 'Robotics', 'Hackathons'].map(cat => {
       const list = S.works.filter(w => w.groups.includes(cat));
       return list.length ? `<div class="cat-head rv"><h2>${cat}</h2><small>${list.length}</small></div>
     <div class="tiles-grid">${list.map((w, i) => {
