@@ -82,36 +82,35 @@ window.SITE = {
   ],
   ribbon: ['PasswordPal', 'SupplyShock', 'DRIP', 'WeedPlucker', 'WearShare', 'AgentArena'],
 
-  /* Works page. `group` picks the section (AI, Machine Learning, Full-Stack, Robotics, Hackathons);
+  /* Works page. `groups` = sections it appears in (AI, Machine Learning, Full-Stack, Desktop, Robotics, Hackathons);
      `cats` are the small chips. `id` links to a case study; otherwise `url` (live) or `repo` (GitHub). */
   works: [
     // AI
-    { group: 'AI', title: 'AgentArena', text: 'Benchmarks AI agents as black boxes: hidden tests, fault injection, cost and latency tracking. Finished 67th of 480 teams at a hackathon.', cats: ['AI Agents', 'Top 67 / 480'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
-    { group: 'AI', id: 'drip', title: 'DRIP', text: 'AI 3D virtual try-on store: Avatar Studio, Style DNA and IDM-VTON try-on.', cats: ['AI', 'Live'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
-    { group: 'AI', title: 'OpsMind', text: 'GCP monitoring & support portal: logs, incidents and cost insights with Gemini explanations.', cats: ['GCP', 'Design System'], repo: 'https://github.com/yokshith09/OpsMind--GCP', colors: ['#1a1c1c', '#3031b6'] },
-    { group: 'AI', title: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs and find teammates.', cats: ['AI', 'Live'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
-    { group: 'AI', title: 'PACT', text: 'Shared project memory and module contracts for developers and AI coding agents, with impact analysis and MCP integration. Building now.', cats: ['MCP', 'In progress'], repo: 'https://github.com/yokshith09/PACT', colors: ['#ffede6', '#3031b6'] },
-    { group: 'AI', title: 'Pluto', text: 'Local-first desktop productivity companion in Tauri v2 + React, with a desktop pet. Building now.', cats: ['Tauri', 'In progress'], repo: 'https://github.com/yokshith09/PLUTO-DESKTOP-PRODUCTIVITY-COMPANION', colors: ['#dae2ff', '#6f6ff0'] },
+    { groups: ['AI', 'Hackathons'], title: 'AgentArena', text: 'Benchmarks AI agents as black boxes: hidden tests, fault injection, cost and latency tracking. Finished 67th of 480 teams at a hackathon.', cats: ['AI Agents', 'Top 67 / 480'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
+    { groups: ['AI', 'Full-Stack'], id: 'drip', title: 'DRIP', text: 'AI 3D virtual try-on store: Avatar Studio, Style DNA and IDM-VTON try-on.', cats: ['AI', 'Live'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
+    { groups: ['AI', 'Full-Stack'], title: 'OpsMind', text: 'GCP monitoring & support portal: logs, incidents and cost insights with Gemini explanations.', cats: ['GCP', 'Design System'], repo: 'https://github.com/yokshith09/OpsMind--GCP', colors: ['#1a1c1c', '#3031b6'] },
+    { groups: ['AI', 'Full-Stack'], title: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs and find teammates.', cats: ['AI', 'Live'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
+    { groups: ['AI'], title: 'PACT', text: 'Shared project memory and module contracts for developers and AI coding agents, with impact analysis and MCP integration. Building now.', cats: ['MCP', 'In progress'], repo: 'https://github.com/yokshith09/PACT', colors: ['#ffede6', '#3031b6'] },
+    { groups: ['Desktop'], title: 'Pluto', text: 'Local-first desktop productivity companion in Tauri v2 + React, with a desktop pet. Building now.', cats: ['Tauri', 'In progress'], repo: 'https://github.com/yokshith09/PLUTO-DESKTOP-PRODUCTIVITY-COMPANION', colors: ['#dae2ff', '#6f6ff0'] },
+    { groups: ['Desktop'], title: 'Pluto Voice', text: 'Voice layer for the Pluto desktop companion, written in Rust.', cats: ['Rust', 'In progress'], repo: 'https://github.com/yokshith09/PLUTO-VOICE', colors: ['#e1e0ff', '#3031b6'] },
     // Machine Learning
-    { group: 'Machine Learning', title: 'Cauliflower Segmentation', text: 'YOLOv8n-seg model for precise cauliflower detection and instance segmentation.', cats: ['YOLOv8', 'Vision'], repo: 'https://github.com/yokshith09/cauliflower_detection', colors: ['#efeee6', '#594400'] },
-    { group: 'Machine Learning', title: 'Diabetic Retinopathy Detection', text: 'Deep learning on retinal images to detect diabetic retinopathy.', cats: ['Medical AI', 'CNN'], repo: 'https://github.com/yokshith09/Advanced-Diabetic-Retinopathy-Detection', colors: ['#b8ffb5', '#00a825'] },
-    { group: 'Machine Learning', title: 'Fake Currency Detection', text: 'LBP texture features and a Random Forest classifier: 77% accuracy.', cats: ['Image Processing'], repo: 'https://github.com/yokshith09/FAKE-CURRENCY-DETECTION-USING-MACHINE-LEARNING-AND-IMAGE-PROCESSING-TECHNIQUES', colors: ['#ffdf92', '#594400'] },
-    { group: 'Machine Learning', title: 'Urban Emission System', text: 'Urban emissions analysis and visualisation app.', cats: ['Data', 'Live'], url: 'https://urban-emission-system.onrender.com/', colors: ['#b8ffb5', '#00530d'] },
+    { groups: ['Machine Learning'], title: 'Cauliflower Segmentation', text: 'YOLOv8n-seg model for precise cauliflower detection and instance segmentation.', cats: ['YOLOv8', 'Vision'], repo: 'https://github.com/yokshith09/cauliflower_detection', colors: ['#efeee6', '#594400'] },
+    { groups: ['Machine Learning'], title: 'Diabetic Retinopathy Detection', text: 'Deep learning on retinal images to detect diabetic retinopathy.', cats: ['Medical AI', 'CNN'], repo: 'https://github.com/yokshith09/Advanced-Diabetic-Retinopathy-Detection', colors: ['#b8ffb5', '#00a825'] },
+    { groups: ['Machine Learning'], title: 'Fake Currency Detection', text: 'LBP texture features and a Random Forest classifier: 77% accuracy.', cats: ['Image Processing'], repo: 'https://github.com/yokshith09/FAKE-CURRENCY-DETECTION-USING-MACHINE-LEARNING-AND-IMAGE-PROCESSING-TECHNIQUES', colors: ['#ffdf92', '#594400'] },
     // Full-Stack
-    { group: 'Full-Stack', id: 'passwordpal', title: 'PasswordPal', text: 'Zero-knowledge password manager: AES-256-GCM, Argon2id, TOTP MFA, 34 tests, CI/CD.', cats: ['Tauri', 'Security'], colors: ['#dae2ff', '#3031b6'] },
-    { group: 'Full-Stack', title: 'WearShare', text: 'P2P fashion rental marketplace: OTP auth, Razorpay, Groq/Gemini assistant with pgvector.', cats: ['Next.js', 'Live'], image: 'shots/wearshare.png', url: 'https://wearshare.qzz.io/', colors: ['#ffede6', '#ea6c11'] },
-    { group: 'Full-Stack', title: 'Aurum Gold Loan', text: 'Full-stack gold-loan application built for the T-Global assignment.', cats: ['TypeScript', 'Live'], url: 'https://aurum-goldloan.vercel.app', colors: ['#ffdf92', '#594400'] },
-    { group: 'Full-Stack', title: 'Secure Travel Itinerary', text: 'Flask + MongoDB app with MFA, RBAC, AES-256 and RSA-2048 signatures.', cats: ['Flask', 'Security'], url: 'https://secured-travel-iternary.vercel.app', colors: ['#dae2ff', '#3031b6'] },
-    { group: 'Full-Stack', title: 'Student Performance Tracker', text: 'Flask app to manage students, track grades and generate reports.', cats: ['Flask', 'Live'], url: 'https://student-performance-tracker-3sil.onrender.com', colors: ['#e1e0ff', '#3031b6'] },
-    { group: 'Full-Stack', title: 'Atelier', text: 'Clothes rental platform front end.', cats: ['React', 'Live'], url: 'https://atelier-clothes-rental-platform-fro.vercel.app/', colors: ['#efeee6', '#ca36b2'] },
+    { groups: ['Desktop'], id: 'passwordpal', title: 'PasswordPal', text: 'Zero-knowledge password manager: AES-256-GCM, Argon2id, TOTP MFA, 34 tests, CI/CD.', cats: ['Tauri', 'Security'], colors: ['#dae2ff', '#3031b6'] },
+    { groups: ['Full-Stack'], title: 'WearShare', text: 'P2P fashion rental marketplace: OTP auth, Razorpay, Groq/Gemini assistant with pgvector.', cats: ['Next.js', 'Live'], image: 'shots/wearshare.png', url: 'https://wearshare.qzz.io/', colors: ['#ffede6', '#ea6c11'] },
+    { groups: ['Full-Stack'], title: 'Secure Travel Itinerary', text: 'Flask + MongoDB app with MFA, RBAC, AES-256 and RSA-2048 signatures.', cats: ['Flask', 'Security'], url: 'https://secured-travel-iternary.vercel.app', colors: ['#dae2ff', '#3031b6'] },
+    { groups: ['Full-Stack'], title: 'Student Performance Tracker', text: 'Flask app to manage students, track grades and generate reports.', cats: ['Flask', 'Live'], url: 'https://student-performance-tracker-3sil.onrender.com', colors: ['#e1e0ff', '#3031b6'] },
+    { groups: ['Full-Stack'], title: 'Atelier', text: 'Clothes rental platform front end.', cats: ['React', 'Live'], url: 'https://atelier-clothes-rental-platform-fro.vercel.app/', colors: ['#efeee6', '#ca36b2'] },
     // Robotics
-    { group: 'Robotics', title: 'Autonomous Quadruped SLAM', text: 'Quadruped robot exploring unknown spaces with multi-agent SLAM, depth perception and frontier exploration.', cats: ['SLAM', 'CoppeliaSim'], repo: 'https://github.com/yokshith09/Autonomous-Quadruped-SLAM-Navigation-Perception', colors: ['#dae2ff', '#00419f'] },
-    { group: 'Robotics', id: 'weedplucker', title: 'WeedPlucker', text: 'YOLOv8 weed segmentation (0.953 weed mAP@50) guiding a robot arm, on Raspberry Pi.', cats: ['YOLOv8', 'Edge AI'], colors: ['#b8ffb5', '#00530d'] },
-    { group: 'Robotics', title: 'Smart Pet Food & Door Automation', text: 'Automated pet feeding and door control system.', cats: ['IoT'], repo: 'https://github.com/yokshith09/Smart-Pet-Food-Monitoring-and-Door-Automation-System', colors: ['#ffede6', '#e32e25'] },
+    { groups: ['Robotics'], title: 'Autonomous Quadruped SLAM', text: 'Quadruped robot exploring unknown spaces with multi-agent SLAM, depth perception and frontier exploration.', cats: ['SLAM', 'CoppeliaSim'], repo: 'https://github.com/yokshith09/Autonomous-Quadruped-SLAM-Navigation-Perception', colors: ['#dae2ff', '#00419f'] },
+    { groups: ['Machine Learning', 'Robotics'], id: 'weedplucker', title: 'WeedPlucker', text: 'YOLOv8 weed segmentation (0.953 weed mAP@50) guiding a robot arm, on Raspberry Pi.', cats: ['YOLOv8', 'Edge AI'], colors: ['#b8ffb5', '#00530d'] },
+    { groups: ['Robotics'], title: 'Smart Pet Food & Door Automation', text: 'Automated pet feeding and door control system.', cats: ['IoT'], repo: 'https://github.com/yokshith09/Smart-Pet-Food-Monitoring-and-Door-Automation-System', colors: ['#ffede6', '#e32e25'] },
     // Hackathons
-    { group: 'Hackathons', id: 'supplyshock', title: 'SupplyShock: Winner', text: 'Fetch-A-Thon 3.0 winner, Best Agentverse Deployment. Multi-agent supply-chain disruption system.', cats: ['Fetch.ai', 'Win'], colors: ['#ffede6', '#ea6c11'] },
-    { group: 'Hackathons', title: 'SymBioForge: 2nd Place', text: 'NitroStack Agentic AI Hackathon, Manufacturing & Industry 4.0 track. Industrial symbiosis MCP platform.', cats: ['MCP', '2nd Place'], image: 'shots/symbioforge.png', url: 'https://sym-bio-forge.vercel.app/', colors: ['#ffdf92', '#ea6c11'] },
-    { group: 'Hackathons', title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', cats: ['AI'], colors: ['#ffede6', '#ca36b2'] },
+    { groups: ['AI', 'Hackathons'], id: 'supplyshock', title: 'SupplyShock: Winner', text: 'Fetch-A-Thon 3.0 winner, Best Agentverse Deployment. Multi-agent supply-chain disruption system.', cats: ['Fetch.ai', 'Win'], colors: ['#ffede6', '#ea6c11'] },
+    { groups: ['AI', 'Hackathons'], title: 'SymBioForge: 2nd Place', text: 'NitroStack Agentic AI Hackathon, Manufacturing & Industry 4.0 track. Industrial symbiosis MCP platform.', cats: ['MCP', '2nd Place'], image: 'shots/symbioforge.png', url: 'https://sym-bio-forge.vercel.app/', colors: ['#ffdf92', '#ea6c11'] },
+    { groups: ['AI', 'Hackathons'], title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', cats: ['AI'], colors: ['#ffede6', '#ca36b2'] },
   ],
 
   /* (no longer shown; the Works page uses `works` above) */
@@ -157,12 +156,13 @@ window.SITE = {
   social: [
     ['GitHub', 'https://github.com/yokshith09'],
     ['LinkedIn', 'https://www.linkedin.com/in/yokshith-kuchipudi-67a0452b3/'],
+    ['Blog', 'https://www.blogger.com/profile/17676293803354109846'],
     ['Email', 'mailto:yokshithkuchipudi09@gmail.com'],
   ],
 
   /* About page */
   about: {
-    bio: "I'm a Computer Science undergraduate at Amrita Vishwa Vidyapeetham (graduating 2027) building across AI agents, LLM applications, machine learning, computer vision and full-stack development. I ship working products with FastAPI, PostgreSQL and cloud services, and I measure them: agents and models judged on task success, reliability, cost and latency. My work ranges from AgentArena, a benchmarking platform for AI agents, to WeedPlucker's YOLOv8 segmentation on a Raspberry Pi, to live products like WearShare and DRIP. I won Fetch-A-Thon 3.0 and placed 2nd at the NitroStack Agentic AI Hackathon. I love designing interactive, beautiful systems (dashboards, landing pages, in-app UI/UX), and I'm driven by entrepreneurship: my goal is to build products into businesses. Outside tech I'm a class representative, event coordinator and NSS volunteer, and I play cricket and act.",
+    bio: "I'm a Computer Science undergraduate at Amrita Vishwa Vidyapeetham (graduating 2027) building across AI agents, LLM applications, machine learning, computer vision and full-stack development. I ship working products with FastAPI, PostgreSQL and cloud services, and I measure them: agents and models judged on task success, reliability, cost and latency. My work ranges from AgentArena, a benchmarking platform for AI agents, to WeedPlucker's YOLOv8 segmentation on a Raspberry Pi, to live products like WearShare and DRIP. I won Fetch-A-Thon 3.0 and placed 2nd at the NitroStack Agentic AI Hackathon. I love designing interactive, beautiful systems (dashboards, landing pages, in-app UI/UX), and I'm driven by entrepreneurship: my goal is to build products into businesses. Outside tech I'm an NSS volunteer, and I play cricket and act.",
     experience: [
       { company: 'SurgeX Digital', role: 'AI Development Intern · AI-assisted lead generation', from: 'Aug 2026', to: 'Sep 2026', color: ['#dae2ff', '#3031b6'] },
       { company: 'Franco Rugs', role: 'Business Development Intern · Bhadohi / Remote', from: 'Nov 2025', to: 'May 2026', color: ['#ffede6', '#e32e25'] },
