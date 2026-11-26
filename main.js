@@ -237,7 +237,7 @@ function works() {
       const cta = w.id ? 'Case study' : w.url ? 'Live site' : w.repo ? 'GitHub' : 'Coming soon';
       return `<${href ? 'a' : 'div'} class="tile rv" style="--d:${(i % 3) * .08}s" data-cats="${esc(w.cats.join('|'))}" ${href ? `href="${esc(href)}"${ext}` : ''}>
         <div class="tart" style="--a:${w.colors[0]};--b:${w.colors[1]}">${w.image ? `<img src="${esc(w.image)}" alt="${esc(w.title)} screenshot" loading="lazy">` : `<span>${esc(w.title.split(' ')[0])}</span>`}</div>
-        <div class="tbody"><div class="chips">${w.cats.map(c => `<span>${esc(c)}</span>`).join('')}</div><h3>${esc(w.title)}</h3><p>${esc(w.text)}</p>
+        <div class="tbody"><div class="chips">${cat !== 'Hackathons' && w.groups.includes('Hackathons') ? '<span class="hk">Hackathon</span>' : ''}${w.cats.map(c => `<span>${esc(c)}</span>`).join('')}</div><h3>${esc(w.title)}</h3><p>${esc(w.text)}</p>
         <span class="tcta">${cta} ${href ? '↗' : ''}</span></div></${href ? 'a' : 'div'}>`;
     }).join('')}</div>` : '';
     }).join('')}
