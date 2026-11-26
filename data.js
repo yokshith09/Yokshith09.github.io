@@ -7,7 +7,7 @@ window.SITE = {
   name: 'Yokshith',
   fullName: 'Yokshith Kuchipudi',
   role: 'AI/ML Engineer & Full-Stack Developer',
-  status: 'Open to internships',
+  status: 'Open to internships & full-time',
   email: 'yokshithkuchipudi09@gmail.com',
   location: 'Coimbatore, India',
   resume: 'resume.pdf',
@@ -86,10 +86,11 @@ window.SITE = {
      `cats` are the small chips. `id` links to a case study; otherwise `url` (live) or `repo` (GitHub). */
   works: [
     // AI
-    { group: 'AI', title: 'AgentArena', text: 'Benchmarks AI agents as black boxes: hidden tests, fault injection, cost and latency tracking. 175 passing tests.', cats: ['AI Agents', 'FastAPI'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
+    { group: 'AI', title: 'AgentArena', text: 'Benchmarks AI agents as black boxes: hidden tests, fault injection, cost and latency tracking. Finished 67th of 480 teams at a hackathon.', cats: ['AI Agents', 'Top 67 / 480'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
     { group: 'AI', id: 'drip', title: 'DRIP', text: 'AI 3D virtual try-on store: Avatar Studio, Style DNA and IDM-VTON try-on.', cats: ['AI', 'Live'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
     { group: 'AI', title: 'OpsMind', text: 'GCP monitoring & support portal: logs, incidents and cost insights with Gemini explanations.', cats: ['GCP', 'Design System'], repo: 'https://github.com/yokshith09/OpsMind--GCP', colors: ['#1a1c1c', '#3031b6'] },
     { group: 'AI', title: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs and find teammates.', cats: ['AI', 'Live'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
+    { group: 'AI', title: 'PACT', text: 'Shared project memory and module contracts for developers and AI coding agents, with impact analysis and MCP integration. Building now.', cats: ['MCP', 'In progress'], repo: 'https://github.com/yokshith09/PACT', colors: ['#ffede6', '#3031b6'] },
     { group: 'AI', title: 'Pluto', text: 'Local-first desktop productivity companion in Tauri v2 + React, with a desktop pet. Building now.', cats: ['Tauri', 'In progress'], repo: 'https://github.com/yokshith09/PLUTO-DESKTOP-PRODUCTIVITY-COMPANION', colors: ['#dae2ff', '#6f6ff0'] },
     // Machine Learning
     { group: 'Machine Learning', title: 'Cauliflower Segmentation', text: 'YOLOv8n-seg model for precise cauliflower detection and instance segmentation.', cats: ['YOLOv8', 'Vision'], repo: 'https://github.com/yokshith09/cauliflower_detection', colors: ['#efeee6', '#594400'] },
@@ -131,7 +132,7 @@ window.SITE = {
   ],
   building: [
     { name: 'Pluto — Desktop Productivity Companion', text: 'A local-first desktop companion for notes, tasks, meetings and daily work logs — with a desktop pet. Voice features in Rust.', tags: ['TypeScript', 'Rust', 'Local-first'], url: 'https://github.com/yokshith09/PLUTO-DESKTOP-PRODUCTIVITY-COMPANION' },
-    { name: 'AgentArena', text: 'A framework-independent platform for benchmarking AI agents: controlled tasks, hidden-test evaluation, LLM cost tracking and fault injection.', tags: ['AI Agents', 'Benchmarks'], url: 'https://github.com/yokshith09/AgentArena' },
+    { name: 'PACT — Project Intelligence & Contracts', text: 'A developer tool where humans and AI coding agents share structured project memory and agree on module contracts: dependency and ownership tracking, contract-change impact analysis, implementation verification, and MCP integration. Goal: less context loss and fewer integration failures in AI-assisted teams.', tags: ['MCP', 'AI Agents', 'Dev Tools'], url: 'https://github.com/yokshith09/PACT' },
   ],
 
   /* slug = icon name on simpleicons.org */
@@ -147,7 +148,7 @@ window.SITE = {
   craftLine: "I don't build to impress. I build to express, solve, and simplify.",
 
   faq: [
-    ['What roles are you looking for?', 'Internships in Machine Learning / Computer Vision, Data Science & Analytics, Python Development and Business Analysis.'],
+    ['What roles are you looking for?', 'Internships and full-time roles in Machine Learning / Computer Vision, Data Science & Analytics, Python Development and Business Analysis.'],
     ['What do you build best?', 'End-to-end ML (data → model → edge deployment), multi-agent AI systems, and full-stack products that go live.'],
     ['Can I see the code?', 'Yes — most projects are public on GitHub at github.com/yokshith09.'],
     ['Do you work in teams?', "Yes. I've built hackathon projects with Team CREED and interned on both the AI and business sides."],
@@ -165,7 +166,6 @@ window.SITE = {
     experience: [
       { company: 'SurgeX Digital', role: 'AI Development Intern · AI-assisted lead generation', from: 'Aug 2026', to: 'Sep 2026', color: ['#dae2ff', '#3031b6'] },
       { company: 'Franco Rugs', role: 'Business Development Intern · Bhadohi / Remote', from: 'Nov 2025', to: 'May 2026', color: ['#ffede6', '#e32e25'] },
-      { company: 'Amrita Vishwa Vidyapeetham', role: 'Class Representative · Event Coordinator', from: '2023', to: '2026', color: ['#ffdf92', '#594400'] },
       { company: 'National Service Scheme', role: 'Volunteer · Social Services', from: 'Oct 2024', to: 'Present', color: ['#b8ffb5', '#00530d'] },
     ],
     education: [
