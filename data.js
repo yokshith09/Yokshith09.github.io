@@ -1,7 +1,7 @@
 /* =====================================================================
    ALL YOUR CONTENT LIVES HERE. Edit this file only — every page reads it.
    Filled from your public GitHub (yokshith09) and LinkedIn profiles.
-   Items marked TODO are waiting for your CV.
+   To update your CV: replace resume.pdf (keep the same name) and push.
    ===================================================================== */
 window.SITE = {
   name: 'Yokshith',
@@ -10,16 +10,16 @@ window.SITE = {
   status: 'Open to internships',
   email: 'yokshithkuchipudi09@gmail.com',
   location: 'Coimbatore, India',
-  resume: '#',                              // TODO: link to your CV PDF
+  resume: 'resume.pdf',
   photo: 'yokshith.jpg',
   heroWords: ['Ship', 'Scale', 'See', 'Think'],
-  intro: "I'm Yokshith — a CS undergrad at Amrita building across the whole ML pipeline: YOLOv8 vision models running on a Raspberry Pi, multi-agent AI systems, and beautifully interactive products people actually use — with the goal of turning them into businesses.",
+  intro: "I'm Yokshith, a CS undergrad at Amrita (class of 2027) building AI agents, LLM apps, computer vision and full-stack products that ship, from YOLOv8 on a Raspberry Pi to agent benchmarks and live marketplaces, with the goal of turning them into businesses.",
   stats: [
     { n: 30, plus: true,  label: 'Projects' },
     { n: 2,  plus: false, label: 'Hackathon Wins' },
     { n: 10, plus: true,  label: 'Live Apps' },
   ],
-  highlight: { n: 2, plus: false, label: 'Internships', title: 'AI & Business, Both Sides', text: 'AI Generalist at SurgeX Digital; Sales & Marketing at Franco Rugs.' },
+  highlight: { n: 2, plus: false, label: 'Internships', title: 'AI & Business, Both Sides', text: 'AI Development at SurgeX Digital; Business Development at Franco Rugs.' },
   shipped: { n: 30, plus: true },
   marquee: ['Machine Learning', 'Computer Vision', 'Agentic AI', 'Full-Stack Dev', 'Edge AI', 'Design Systems', 'Entrepreneurship'],
 
@@ -82,33 +82,41 @@ window.SITE = {
   ],
   ribbon: ['PasswordPal', 'SupplyShock', 'DRIP', 'WeedPlucker', 'WearShare', 'AgentArena'],
 
-  /* Works page tiles, filterable. cats: Hackathons, AI, Machine Learning, Full-Stack, Robotics.
-     `id` links to a case study; otherwise `url` (live) or `repo` (GitHub). */
+  /* Works page. `group` picks the section (AI, Machine Learning, Full-Stack, Robotics, Hackathons);
+     `cats` are the small chips. `id` links to a case study; otherwise `url` (live) or `repo` (GitHub). */
   works: [
-    { id: 'passwordpal', title: 'PasswordPal', text: 'Zero-knowledge password manager in Tauri + Rust with full CI/CD.', cats: ['Full-Stack'], colors: ['#dae2ff', '#3031b6'] },
-    { id: 'supplyshock', title: 'SupplyShock', text: 'Multi-agent supply-chain disruption system — Fetchathon 3.0.', cats: ['AI', 'Hackathons'], colors: ['#ffede6', '#ea6c11'] },
-    { id: 'drip', title: 'DRIP', text: 'AI virtual try-on store with a 3D fitting room.', cats: ['AI', 'Full-Stack'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
-    { id: 'weedplucker', title: 'WeedPlucker', text: 'YOLOv8 weed detection on a Raspberry Pi for robotic plucking.', cats: ['Machine Learning', 'Robotics'], colors: ['#b8ffb5', '#00530d'] },
-    { title: 'SymBioForge — 2nd Place', text: 'Industrial symbiosis MCP platform — NitroStack Agentic AI Hackathon, Team CREED.', cats: ['Hackathons', 'AI'], image: 'shots/symbioforge.png', url: 'https://sym-bio-forge.vercel.app/', colors: ['#ffdf92', '#ea6c11'] },
-    { title: 'Hackathon Win #2', text: 'TODO — details from your CV.', cats: ['Hackathons'], colors: ['#e1e0ff', '#3031b6'] },
-    { title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', cats: ['Hackathons', 'AI'], colors: ['#ffede6', '#ca36b2'] },
-    { title: 'WearShare', text: 'Peer-to-peer clothing rental marketplace — Next.js, Supabase, Razorpay, Gemini.', cats: ['Full-Stack'], image: 'shots/wearshare.png', url: 'https://wearshare.qzz.io/', colors: ['#ffede6', '#ea6c11'] },
-    { title: 'Collab Space', text: 'AI collaboration platform: PRDs, teammates and architecture diagrams.', cats: ['AI', 'Full-Stack'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
-    { title: 'AgentArena', text: 'Benchmarking AI agents with hidden tests, cost tracking and fault injection.', cats: ['AI'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
-    { title: 'Autonomous Quadruped SLAM', text: 'Multi-agent SLAM, depth perception and frontier exploration in CoppeliaSim.', cats: ['Robotics', 'AI'], repo: 'https://github.com/yokshith09/Autonomous-Quadruped-SLAM-Navigation-Perception', colors: ['#dae2ff', '#00419f'] },
-    { title: 'Diabetic Retinopathy Detection', text: 'Deep learning on retinal images to detect diabetic retinopathy.', cats: ['Machine Learning'], repo: 'https://github.com/yokshith09/Advanced-Diabetic-Retinopathy-Detection', colors: ['#b8ffb5', '#00a825'] },
-    { title: 'Cauliflower Segmentation', text: 'YOLOv8n-seg model for precise cauliflower detection and segmentation.', cats: ['Machine Learning', 'Robotics'], repo: 'https://github.com/yokshith09/cauliflower_detection', colors: ['#efeee6', '#594400'] },
-    { title: 'Fake Currency Detection', text: 'LBP texture features and a Random Forest classifier — 77% accuracy.', cats: ['Machine Learning'], repo: 'https://github.com/yokshith09/FAKE-CURRENCY-DETECTION-USING-MACHINE-LEARNING-AND-IMAGE-PROCESSING-TECHNIQUES', colors: ['#ffdf92', '#594400'] },
-    { title: 'Smart Pet Food & Door Automation', text: 'Automated pet feeding and door control system.', cats: ['Robotics'], repo: 'https://github.com/yokshith09/Smart-Pet-Food-Monitoring-and-Door-Automation-System', colors: ['#ffede6', '#e32e25'] },
-    { title: 'Secure Travel Itinerary', text: 'Flask + MongoDB app with MFA, RBAC, AES-256 and RSA-2048 signatures.', cats: ['Full-Stack'], url: 'https://secured-travel-iternary.vercel.app', colors: ['#dae2ff', '#3031b6'] },
-    { title: 'Urban Emission System', text: 'Urban emissions analysis and visualisation app.', cats: ['Machine Learning', 'Full-Stack'], url: 'https://urban-emission-system.onrender.com/', colors: ['#b8ffb5', '#00530d'] },
-    { title: 'Atelier', text: 'Clothes rental platform front end.', cats: ['Full-Stack'], url: 'https://atelier-clothes-rental-platform-fro.vercel.app/', colors: ['#efeee6', '#ca36b2'] },
+    // AI
+    { group: 'AI', title: 'AgentArena', text: 'Benchmarks AI agents as black boxes: hidden tests, fault injection, cost and latency tracking. 175 passing tests.', cats: ['AI Agents', 'FastAPI'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
+    { group: 'AI', id: 'drip', title: 'DRIP', text: 'AI 3D virtual try-on store: Avatar Studio, Style DNA and IDM-VTON try-on.', cats: ['AI', 'Live'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
+    { group: 'AI', title: 'OpsMind', text: 'GCP monitoring & support portal: logs, incidents and cost insights with Gemini explanations.', cats: ['GCP', 'Design System'], repo: 'https://github.com/yokshith09/OpsMind--GCP', colors: ['#1a1c1c', '#3031b6'] },
+    { group: 'AI', title: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs and find teammates.', cats: ['AI', 'Live'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
+    { group: 'AI', title: 'Pluto', text: 'Local-first desktop productivity companion in Tauri v2 + React, with a desktop pet. Building now.', cats: ['Tauri', 'In progress'], repo: 'https://github.com/yokshith09/PLUTO-DESKTOP-PRODUCTIVITY-COMPANION', colors: ['#dae2ff', '#6f6ff0'] },
+    // Machine Learning
+    { group: 'Machine Learning', title: 'Cauliflower Segmentation', text: 'YOLOv8n-seg model for precise cauliflower detection and instance segmentation.', cats: ['YOLOv8', 'Vision'], repo: 'https://github.com/yokshith09/cauliflower_detection', colors: ['#efeee6', '#594400'] },
+    { group: 'Machine Learning', title: 'Diabetic Retinopathy Detection', text: 'Deep learning on retinal images to detect diabetic retinopathy.', cats: ['Medical AI', 'CNN'], repo: 'https://github.com/yokshith09/Advanced-Diabetic-Retinopathy-Detection', colors: ['#b8ffb5', '#00a825'] },
+    { group: 'Machine Learning', title: 'Fake Currency Detection', text: 'LBP texture features and a Random Forest classifier: 77% accuracy.', cats: ['Image Processing'], repo: 'https://github.com/yokshith09/FAKE-CURRENCY-DETECTION-USING-MACHINE-LEARNING-AND-IMAGE-PROCESSING-TECHNIQUES', colors: ['#ffdf92', '#594400'] },
+    { group: 'Machine Learning', title: 'Urban Emission System', text: 'Urban emissions analysis and visualisation app.', cats: ['Data', 'Live'], url: 'https://urban-emission-system.onrender.com/', colors: ['#b8ffb5', '#00530d'] },
+    // Full-Stack
+    { group: 'Full-Stack', id: 'passwordpal', title: 'PasswordPal', text: 'Zero-knowledge password manager: AES-256-GCM, Argon2id, TOTP MFA, 34 tests, CI/CD.', cats: ['Tauri', 'Security'], colors: ['#dae2ff', '#3031b6'] },
+    { group: 'Full-Stack', title: 'WearShare', text: 'P2P fashion rental marketplace: OTP auth, Razorpay, Groq/Gemini assistant with pgvector.', cats: ['Next.js', 'Live'], image: 'shots/wearshare.png', url: 'https://wearshare.qzz.io/', colors: ['#ffede6', '#ea6c11'] },
+    { group: 'Full-Stack', title: 'Aurum Gold Loan', text: 'Full-stack gold-loan application built for the T-Global assignment.', cats: ['TypeScript', 'Live'], url: 'https://aurum-goldloan.vercel.app', colors: ['#ffdf92', '#594400'] },
+    { group: 'Full-Stack', title: 'Secure Travel Itinerary', text: 'Flask + MongoDB app with MFA, RBAC, AES-256 and RSA-2048 signatures.', cats: ['Flask', 'Security'], url: 'https://secured-travel-iternary.vercel.app', colors: ['#dae2ff', '#3031b6'] },
+    { group: 'Full-Stack', title: 'Student Performance Tracker', text: 'Flask app to manage students, track grades and generate reports.', cats: ['Flask', 'Live'], url: 'https://student-performance-tracker-3sil.onrender.com', colors: ['#e1e0ff', '#3031b6'] },
+    { group: 'Full-Stack', title: 'Atelier', text: 'Clothes rental platform front end.', cats: ['React', 'Live'], url: 'https://atelier-clothes-rental-platform-fro.vercel.app/', colors: ['#efeee6', '#ca36b2'] },
+    // Robotics
+    { group: 'Robotics', title: 'Autonomous Quadruped SLAM', text: 'Quadruped robot exploring unknown spaces with multi-agent SLAM, depth perception and frontier exploration.', cats: ['SLAM', 'CoppeliaSim'], repo: 'https://github.com/yokshith09/Autonomous-Quadruped-SLAM-Navigation-Perception', colors: ['#dae2ff', '#00419f'] },
+    { group: 'Robotics', id: 'weedplucker', title: 'WeedPlucker', text: 'YOLOv8 weed segmentation (0.953 weed mAP@50) guiding a robot arm, on Raspberry Pi.', cats: ['YOLOv8', 'Edge AI'], colors: ['#b8ffb5', '#00530d'] },
+    { group: 'Robotics', title: 'Smart Pet Food & Door Automation', text: 'Automated pet feeding and door control system.', cats: ['IoT'], repo: 'https://github.com/yokshith09/Smart-Pet-Food-Monitoring-and-Door-Automation-System', colors: ['#ffede6', '#e32e25'] },
+    // Hackathons
+    { group: 'Hackathons', id: 'supplyshock', title: 'SupplyShock: Winner', text: 'Fetch-A-Thon 3.0 winner, Best Agentverse Deployment. Multi-agent supply-chain disruption system.', cats: ['Fetch.ai', 'Win'], colors: ['#ffede6', '#ea6c11'] },
+    { group: 'Hackathons', title: 'SymBioForge: 2nd Place', text: 'NitroStack Agentic AI Hackathon, Manufacturing & Industry 4.0 track. Industrial symbiosis MCP platform.', cats: ['MCP', '2nd Place'], image: 'shots/symbioforge.png', url: 'https://sym-bio-forge.vercel.app/', colors: ['#ffdf92', '#ea6c11'] },
+    { group: 'Hackathons', title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', cats: ['AI'], colors: ['#ffede6', '#ca36b2'] },
   ],
 
   /* (no longer shown; the Works page uses `works` above) */
   showcase: [
     { title: 'SymBioForge — 2nd Place', text: '2nd place, Manufacturing & Industry 4.0 track, NitroStack 24-hour Agentic AI Hackathon, with Team CREED.', tag: 'Hackathon Win', colors: ['#ffdf92', '#ea6c11'] },
-    { title: 'Hackathon Win #2', text: 'TODO — details from your CV.', tag: 'Hackathon Win', colors: ['#e1e0ff', '#3031b6'] },
+    { title: 'SupplyShock: Winner', text: 'Fetch-A-Thon 3.0, Best Agentverse Deployment category.', tag: 'Hackathon Win', colors: ['#e1e0ff', '#3031b6'] },
     { title: 'Exam Whisperer', text: 'Team CREED’s first AI-powered prototype, built at Code Cubicle.', tag: 'Hackathon', colors: ['#ffede6', '#ca36b2'] },
     { title: 'Autonomous Quadruped SLAM', text: 'A quadruped robot exploring unknown spaces with multi-agent SLAM, depth perception and frontier exploration in CoppeliaSim.', tag: 'Robotics', colors: ['#dae2ff', '#00419f'] },
     { title: 'Diabetic Retinopathy Detection', text: 'Deep learning on retinal images to detect diabetic retinopathy.', tag: 'Medical AI', colors: ['#b8ffb5', '#00a825'] },
@@ -134,7 +142,7 @@ window.SITE = {
     ['typescript', '3178C6', '#d6e2f3'], ['nextdotjs', '111111', '#e2e0dc'], ['rust', '000000', '#ead9cc'], ['tauri', '24C8D8', '#d3f1f4'],
     ['supabase', '3ECF8E', '#d3f1e3'], ['opencv', '5C3EE8', '#dedaf9'], ['raspberrypi', 'A22846', '#f3d6dd'], ['onnx', '005CED', '#d4e3fa'], ['claude', 'D97757', '#f6ddd2'],
   ],
-  languages: [['English', 95], ['Telugu', 100], ['Hindi', 70], ['Tamil', 55]],   // TODO: confirm from CV
+  languages: [['English', 95], ['Telugu', 100], ['Hindi', 70], ['Tamil', 55]],   // not in CV: edit if wrong
   process: ['Ideas', 'Data', 'Design', 'Build', 'Ship', 'Scale'],
   craftLine: "I don't build to impress. I build to express, solve, and simplify.",
 
@@ -153,21 +161,27 @@ window.SITE = {
 
   /* About page */
   about: {
-    bio: "I'm a Computer Science undergraduate at Amrita Vishwa Vidyapeetham focused on Machine Learning, Computer Vision and Edge AI. My work spans the full ML pipeline — curating datasets and annotating in YOLO format, training with PyTorch and YOLOv8, and deploying for real-time inference on hardware like the Raspberry Pi 4 with ONNX Runtime — plus self-supervised learning with SimCLR and contrastive (NT-Xent) loss. On the business side I've handled sales, social strategy and digital marketing. I love designing interactive, beautiful systems — dashboards, landing pages and in-app UI/UX — and I'm driven by entrepreneurship: my goal is to build products into businesses. Beyond tech I'm a professional cricket player and an actor, which taught me discipline, teamwork and performing under pressure.",
+    bio: "I'm a Computer Science undergraduate at Amrita Vishwa Vidyapeetham (graduating 2027) building across AI agents, LLM applications, machine learning, computer vision and full-stack development. I ship working products with FastAPI, PostgreSQL and cloud services, and I measure them: agents and models judged on task success, reliability, cost and latency. My work ranges from AgentArena, a benchmarking platform for AI agents, to WeedPlucker's YOLOv8 segmentation on a Raspberry Pi, to live products like WearShare and DRIP. I won Fetch-A-Thon 3.0 and placed 2nd at the NitroStack Agentic AI Hackathon. I love designing interactive, beautiful systems (dashboards, landing pages, in-app UI/UX), and I'm driven by entrepreneurship: my goal is to build products into businesses. Outside tech I'm a class representative, event coordinator and NSS volunteer, and I play cricket and act.",
     experience: [
-      { company: 'SurgeX Digital', role: 'AI Generalist Intern · Remote', from: 'Aug 2026', to: 'Sep 2026', color: ['#dae2ff', '#3031b6'] },
-      { company: 'Franco Rugs', role: 'Sales and Marketing Intern', from: 'Nov 2025', to: 'May 2026', color: ['#ffede6', '#e32e25'] },
+      { company: 'SurgeX Digital', role: 'AI Development Intern · AI-assisted lead generation', from: 'Aug 2026', to: 'Sep 2026', color: ['#dae2ff', '#3031b6'] },
+      { company: 'Franco Rugs', role: 'Business Development Intern · Bhadohi / Remote', from: 'Nov 2025', to: 'May 2026', color: ['#ffede6', '#e32e25'] },
+      { company: 'Amrita Vishwa Vidyapeetham', role: 'Class Representative · Event Coordinator', from: '2023', to: '2026', color: ['#ffdf92', '#594400'] },
       { company: 'National Service Scheme', role: 'Volunteer · Social Services', from: 'Oct 2024', to: 'Present', color: ['#b8ffb5', '#00530d'] },
     ],
-    education: [ { title: 'B.Tech, Computer Science & Engineering', place: 'Amrita Vishwa Vidyapeetham, Coimbatore', from: 'TODO', to: 'Present' } ],
+    education: [
+      { title: 'B.Tech, Computer Science & Engineering', place: 'Amrita Vishwa Vidyapeetham, Coimbatore', from: '2023', to: '2027' },
+      { title: 'Class XII · 96%', place: 'Telangana State Board of Intermediate Education', from: '2023', to: '2023' },
+    ],
     certs: [
       { title: 'Nitrostack MCP Creator', place: 'Nitrostack', time: 'Jul 2026', url: 'https://nitrostack.ai/university/6a54bc7ccc0a343237365fb3/certificate/6a645749b7c23ca10dd2042b' },
     ],
     skills: {
-      'Machine Learning & Vision': ['PyTorch', 'YOLOv8', 'OpenCV', 'SimCLR', 'Contrastive Learning', 'scikit-learn', 'Random Forest', 'ONNX Runtime', 'Raspberry Pi'],
-      'AI Agents': ['Multi-agent Systems', 'Fetch.ai uAgents', 'MCP Servers', 'LLM Evaluation', 'Prompt Engineering'],
-      'Full-Stack & DevOps': ['React', 'Next.js', 'TypeScript', 'Node.js', 'Flask', 'Supabase', 'PostgreSQL', 'MongoDB', 'Rust', 'Tauri', 'GitHub Actions', 'Render', 'Vercel'],
-      'Business': ['Sales Outreach', 'Social Media Strategy', 'Digital Marketing', 'Client Communication'],
+      'Generative AI & Agents': ['LLM Integration', 'Prompt Engineering', 'RAG', 'Embeddings', 'Vector Search', 'Multi-Agent Systems', 'Tool Calling', 'MCP', 'Agent Benchmarking', 'Groq', 'Gemini', 'NitroStack', 'Fetch.ai uAgents'],
+      'ML & Computer Vision': ['PyTorch', 'scikit-learn', 'YOLOv8', 'CNNs', 'Vision Transformers', 'Transfer Learning', 'SimCLR', 'OpenCV', 'Instance Segmentation', 'Grad-CAM', 'Quantization', 'ONNX Runtime'],
+      'Backend & Data': ['Python', 'FastAPI', 'REST APIs', 'JWT / OTP / TOTP', 'Argon2 & bcrypt', 'Razorpay', 'PostgreSQL', 'Supabase', 'pgvector', 'Redis', 'SQL'],
+      'Cloud & DevOps': ['GCP Cloud Run', 'Cloud Build', 'Cloud Monitoring', 'Docker', 'GitHub Actions', 'Vercel', 'Render', 'Linux', 'Git'],
+      'Security': ['AES-256-GCM', 'Argon2id', 'Zero-Knowledge Architecture'],
+      'Business': ['Sales Outreach', 'Cold Calling', 'Competitor Benchmarking', 'B2B Strategy'],
     },
     hobbies: [['🏏', 'Cricket'], ['🎭', 'Acting'], ['🤝', 'Volunteering'], ['🤖', 'Robotics'], ['📚', 'Learning'], ['🚀', 'Hackathons']],
   },

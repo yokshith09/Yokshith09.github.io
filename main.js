@@ -229,8 +229,7 @@ function works() {
   <section><div class="frame"><div class="inner">
     <div class="page-head"><div class="kicker rv">Portfolio</div><h1 class="split">All Works</h1><p class="rv">${S.works.length} projects across AI, machine learning, full-stack, robotics and hackathons.</p></div>
     ${['AI', 'Machine Learning', 'Full-Stack', 'Robotics', 'Hackathons'].map(cat => {
-      const order = ['Hackathons', 'AI', 'Machine Learning', 'Full-Stack', 'Robotics'];
-      const list = S.works.filter(w => order.find(c => w.cats.includes(c)) === cat);
+      const list = S.works.filter(w => w.group === cat);
       return list.length ? `<div class="cat-head rv"><h2>${cat}</h2><small>${list.length}</small></div>
     <div class="tiles-grid">${list.map((w, i) => {
       const href = w.id ? `project.html?id=${w.id}` : (w.url || w.repo || '');
@@ -249,7 +248,7 @@ function works() {
 /* ---------- ABOUT PAGE ---------- */
 function about() {
   const A = S.about, initial = s => esc(s.trim()[0] || '•');
-  const exp = A.experience.map(e => `<div class="row" style="--a:${e.color[0]};--b:${e.color[1]}"><div class="logo-sq">${initial(e.company)}</div><div><h3>${esc(e.company)}</h3><small>${esc(e.role)}</small></div><span class="when">${esc(e.from)} to ${esc(e.to)}</span></div>
+  const exp = A.experience.map(e => `<div class="row" style="--a:${e.color[0]};--b:${e.color[1]}"><div class="logo-sq">${initial(e.company)}</div><div><h3>${esc(e.company)}</h3><small>${esc(e.role)}</small></div><span class="when">${e.from === e.to ? esc(e.to) : `${esc(e.from)} to ${esc(e.to)}`}</span></div>
     ${e.steps ? `<div class="sub-steps">${e.steps.map(([r, t]) => `<div><b>${esc(r)}</b><span>${esc(t)}</span></div>`).join('')}</div>` : ''}`).join('');
   return `${nav()}
   <section id="top"><div class="frame"><div class="inner">
@@ -258,7 +257,7 @@ function about() {
       ${sphere()}</div>
     <p class="bio rv">${esc(A.bio)}</p>
     <div class="panel rv"><h2>Work Experience</h2>${exp}</div>
-    <div class="panel rv"><h2>Education</h2>${A.education.map(e => `<div class="row" style="--a:#b8ffb5;--b:#00530d"><div class="logo-sq">🎓</div><div><h3>${esc(e.title)}</h3><small>${esc(e.place)}</small></div><span class="when">${esc(e.from)} to ${esc(e.to)}</span></div>`).join('')}</div>
+    <div class="panel rv"><h2>Education</h2>${A.education.map(e => `<div class="row" style="--a:#b8ffb5;--b:#00530d"><div class="logo-sq">🎓</div><div><h3>${esc(e.title)}</h3><small>${esc(e.place)}</small></div><span class="when">${e.from === e.to ? esc(e.to) : `${esc(e.from)} to ${esc(e.to)}`}</span></div>`).join('')}</div>
     <div class="panel rv"><h2>Certifications &amp; Courses</h2>${A.certs.map((c, i) => `<div class="row" style="--a:${i % 2 ? '#b8ffb5' : '#ffede6'};--b:${i % 2 ? '#00530d' : '#ea6c11'}"><div class="logo-sq">◎</div><div><h3>${esc(c.title)}</h3><small>${esc(c.place)}</small><br><a class="cred" href="${esc(c.url)}" target="_blank" rel="noopener">Show credential ↗</a></div><span class="when">${esc(c.time)}</span></div>`).join('')}</div>
     <div class="panel rv"><h2>Core Skills</h2><div class="skill-acc">${Object.entries(A.skills).map(([g, list], i) => `<details ${i ? '' : 'open'}><summary>${esc(g)}</summary><div class="chips">${list.map(s => `<span>${esc(s)}</span>`).join('')}</div></details>`).join('')}</div></div>
     <div class="panel rv"><h2>My Hobbies</h2><div class="hobbies"><div class="track">${dup(A.hobbies.map(([e, n]) => `<div class="hobby"><div>${e}</div><small>${esc(n)}</small></div>`).join(''))}</div></div></div>
@@ -458,25 +457,28 @@ if (page === 'home') {
     const name = $('#ldName'), cur = $('#ldCursor'), sel = $('#sel');
     $$('.word span', name).forEach((s, i) => s.style.transitionDelay = i * 50 + 'ms');
     if (reduce) return reveal();
+    // ponytail: first visit ~2.8s, repeat visits this tab (e.g. logo click) ~1.2s
+    const f = sessionStorage.getItem('seenLoader') ? .35 : .75; sessionStorage.setItem('seenLoader', 1);
+    const nap = ms => sleep(ms * f);
     const t0 = performance.now();
     (function tick(t) {
       const c = $('#count'); if (!c) return;
-      const p = Math.min((t - t0) / 3000, 1), e = 1 - Math.pow(1 - p, 3);
+      const p = Math.min((t - t0) / (3000 * f), 1), e = 1 - Math.pow(1 - p, 3);
       c.textContent = Math.round(e * 100); $('#bar').style.width = e * 100 + '%';
       if (p < 1) requestAnimationFrame(tick);
     })(t0);
-    await sleep(200); name.classList.add('in');
-    await sleep(1300);
+    await nap(200); name.classList.add('in');
+    await nap(1300);
     const r = name.getBoundingClientRect();
     cur.style.transform = `translate(${r.left - 6}px,${r.top - 6}px)`;
-    await sleep(1000);
-    Object.assign(sel.style, { left: r.left + 'px', top: r.top + 'px', width: 0, height: 0, opacity: 1, transition: 'width .7s, height .7s' });
-    cur.style.transition = 'transform .7s cubic-bezier(.65,0,.35,1)';
+    await nap(1000);
+    Object.assign(sel.style, { left: r.left + 'px', top: r.top + 'px', width: 0, height: 0, opacity: 1, transition: `width ${.7 * f}s, height ${.7 * f}s` });
+    cur.style.transition = `transform ${.7 * f}s cubic-bezier(.65,0,.35,1)`;
     requestAnimationFrame(() => { sel.style.width = r.width + 'px'; sel.style.height = r.height + 'px'; cur.style.transform = `translate(${r.right - 6}px,${r.bottom - 6}px)`; });
     $('#dim').textContent = `${Math.round(r.width)} × ${Math.round(r.height)}`;
-    await sleep(900);
+    await nap(900);
     cur.classList.add('click'); await sleep(150); cur.classList.remove('click');
-    await sleep(250);
+    await nap(250);
     reveal();
   })();
 } else {
