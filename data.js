@@ -79,6 +79,18 @@ window.SITE = {
         { title: 'The Dataset', callout: true, body: ['Real field images under natural lighting, with occlusions, shadows and complex backgrounds — annotated for instance segmentation.'] },
         { title: 'Model & Deployment', body: ['YOLOv8n-seg trained for high-precision detection and segmentation, exported for real-time inference on a Raspberry Pi 4 with ONNX Runtime.'] },
       ] },
+    { id: 'jobhunter', title: 'Job Hunter: AI Agent Skill for Job Search and Tailored Resumes', summary: 'A portable AI agent skill that finds jobs, scores them against my profile, and builds a tailored one-page LaTeX resume for each job I approve. Works with Claude Code, Antigravity, Gemini CLI and other agents that support Agent Skills.',
+      tags: ['AI Agents', 'Developer Tools'], duration: 'Personal project', role: 'Builder', tools: 'Python (stdlib only), Agent Skills (SKILL.md), LaTeX + Tectonic, HTML/JS dashboard', team: 'Solo',
+      colors: ['#e1e0ff', '#3031b6'], type: 'desktop', repo: 'https://github.com/yokshith09/JOB-SEARCH-SKILL',
+      sections: [
+        { title: 'Project Overview', body: ['Job Hunter is an Agent Skill: a folder with a SKILL.md that any compatible coding agent can load. It runs the whole job search loop, from finding postings to a compiled, tailored resume.'],
+          list: ['Pulls live postings from company career APIs (Greenhouse, Lever, Ashby) and job boards; dedupes by normalised URL so a listing is never shown twice.', 'Scores each job 0 to 100 with eligibility gates, a "why it fits" summary and honest skill gaps.'] },
+        { title: 'Human in the Loop', callout: true, body: ['Nothing is prepared until I approve. Before preparing, it shows the current settings (template, projects, package parts, file name) and asks whether to continue, reset to defaults, or change them.'] },
+        { title: 'Tailored Resumes', body: ['Each approved job gets its own resume, built only from facts I have provided.'],
+          list: ['Picks exactly 3 projects per resume from a role to project table.', 'Writes LaTeX from my own template and compiles it with Tectonic.', 'Auto-checks the result: exactly 1 page, at least 90% filled, correct project count.', 'Never invents skills or numbers.'] },
+        { title: 'Links, Tracking and Privacy', body: [],
+          list: ['Only uses job links copied from sources; links that cannot be checked are marked unverified, with a company link as a fallback.', 'Saves applications in dated day folders, named by company and role.', 'Tracks status from found to offer, and serves a local dashboard on 127.0.0.1.', 'All personal data stays in ~/.job-hunter/, separate from the published skill. MIT licensed.'] },
+      ] },
   ],
   ribbon: ['PasswordPal', 'SupplyShock', 'DRIP', 'WeedPlucker', 'WearShare', 'AgentArena'],
 
@@ -87,6 +99,7 @@ window.SITE = {
   works: [
     // AI
     { groups: ['AI', 'Hackathons'], title: 'AgentArena', text: 'Benchmarks AI agents as black boxes: hidden tests, fault injection, cost and latency tracking. Finished 67th of 480 teams at a hackathon.', cats: ['AI Agents', 'Top 67 / 480'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
+    { groups: ['AI'], id: 'jobhunter', title: 'Job Hunter', mark: 'Job Hunter', text: 'AI agent skill that finds jobs, scores them against my profile and builds a tailored one-page LaTeX resume for each job I approve.', cats: ['Agent Skills', 'Python'], colors: ['#e1e0ff', '#3031b6'] },
     { groups: ['AI', 'Full-Stack'], id: 'drip', title: 'DRIP', text: 'AI 3D virtual try-on store: Avatar Studio, Style DNA and IDM-VTON try-on.', cats: ['AI', 'Live'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
     { groups: ['Full-Stack', 'Cloud'], title: 'OpsMind', text: 'GCP monitoring & support portal: logs, incidents and cost insights with Gemini explanations.', cats: ['GCP', 'Design System'], repo: 'https://github.com/yokshith09/OpsMind--GCP', colors: ['#1a1c1c', '#3031b6'] },
     { groups: ['Full-Stack'], title: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs and find teammates.', cats: ['AI', 'Live'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
