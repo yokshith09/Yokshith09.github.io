@@ -99,7 +99,7 @@ window.SITE = {
   works: [
     // AI
     { groups: ['AI', 'Hackathons'], title: 'AgentArena', text: 'Benchmarks AI agents as black boxes: hidden tests, fault injection, cost and latency tracking. Finished 67th of 480 teams at a hackathon.', cats: ['AI Agents', 'Top 67 / 480'], repo: 'https://github.com/yokshith09/AgentArena', colors: ['#1a1c1c', '#00a825'] },
-    { groups: ['AI'], id: 'jobhunter', title: 'Job Hunter', mark: 'Job Hunter', text: 'AI agent skill that finds jobs, scores them against my profile and builds a tailored one-page LaTeX resume for each job I approve.', cats: ['Agent Skills', 'Python'], colors: ['#e1e0ff', '#3031b6'] },
+    { groups: ['AI'], id: 'jobhunter', title: 'Job Hunter', mark: 'Job Hunter', text: 'AI agent skill that finds jobs, scores them against my profile and builds a tailored one-page LaTeX resume for each job I approve.', cats: ['Agent + Skill', 'Python'], colors: ['#e1e0ff', '#3031b6'] },
     { groups: ['AI', 'Full-Stack'], id: 'drip', title: 'DRIP', text: 'AI 3D virtual try-on store: Avatar Studio, Style DNA and IDM-VTON try-on.', cats: ['AI', 'Live'], image: 'shots/drip.png', colors: ['#efeee6', '#1a1c1c'] },
     { groups: ['Full-Stack', 'Cloud'], title: 'OpsMind', text: 'GCP monitoring & support portal: logs, incidents and cost insights with Gemini explanations.', cats: ['GCP', 'Design System'], repo: 'https://github.com/yokshith09/OpsMind--GCP', colors: ['#1a1c1c', '#3031b6'] },
     { groups: ['Full-Stack'], title: 'Collab Space', text: 'AI collaboration platform: validate ideas, generate PRDs and find teammates.', cats: ['AI', 'Live'], url: 'https://collab-space-teal.vercel.app/', colors: ['#e1e0ff', '#3031b6'] },
